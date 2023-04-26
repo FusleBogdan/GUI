@@ -9,11 +9,11 @@ public class TextureHandler {
 	private final int NO_TEXTURES = 1;
 	private int texture[] = new int[NO_TEXTURES];
 	TextureReader.Texture[] tex = new TextureReader.Texture[NO_TEXTURES];
-	
+
 	private GL gl;
 	private GLU glu;
-	
-	
+
+
 
 	public TextureHandler(GL gl, GLU glu, String path, boolean mipmapped) {
 		this.gl = gl;
@@ -37,7 +37,7 @@ public class TextureHandler {
 				GL.GL_LINEAR);
 		this.gl.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER,
 				GL.GL_LINEAR);
-		
+
 		gl.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, GL.GL_REPEAT);
 		gl.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, GL.GL_CLAMP_TO_EDGE);
 
@@ -57,9 +57,9 @@ public class TextureHandler {
 	public void disable() {
 		this.gl.glDisable(GL.GL_TEXTURE_2D);
 	}
-	
+
 	private void makeRGBTexture(GL gl, GLU glu, TextureReader.Texture img,
-			int target, boolean mipmapped) {
+								int target, boolean mipmapped) {
 		if (mipmapped) {
 			glu.gluBuild2DMipmaps(target, GL.GL_RGB8, img.getWidth(), img
 					.getHeight(), GL.GL_RGB, GL.GL_UNSIGNED_BYTE, img

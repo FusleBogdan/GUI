@@ -4,7 +4,6 @@ import com.jogamp.opengl.*;
 import com.jogamp.opengl.awt.GLCanvas;
 import com.jogamp.opengl.fixedfunc.GLMatrixFunc;
 import com.jogamp.opengl.util.Animator;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -118,25 +117,25 @@ public class lab3 extends JFrame implements GLEventListener
 
         gl.glColor3f(1.f, 0.f, 0.f);
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glVertex2f(0.9f, 0.9f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glVertex2f(0.9f, 0.9f);
         gl.glEnd();
 
         gl.glColor3f(0.f, 1.f, 0.f);
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2f(0.9f, 0.2f);
-            gl.glVertex2f(0.2f, 0.9f);
+        gl.glVertex2f(0.9f, 0.2f);
+        gl.glVertex2f(0.2f, 0.9f);
         gl.glEnd();
 
         gl.glBegin(GL2.GL_POLYGON);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         // Do not render front-faced polygons.
@@ -148,14 +147,14 @@ public class lab3 extends JFrame implements GLEventListener
 
         // Define vertices in clockwise order (back-faced)
         gl.glBegin(GL2.GL_POLYGON);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         // Generate a unique ID for our list.
@@ -163,7 +162,7 @@ public class lab3 extends JFrame implements GLEventListener
 
         // Generate the Display List
         gl.glNewList(aCircle, GL2.GL_COMPILE);
-            drawCircle(gl, 0.5f, 0.5f, 0.4f);
+        drawCircle(gl, 0.5f, 0.5f, 0.4f);
         gl.glEndList();
 
         gl.glColor3f(1.0f, 1.0f, 1.0f);

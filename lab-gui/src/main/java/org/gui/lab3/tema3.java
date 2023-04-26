@@ -66,7 +66,7 @@ public class tema3 extends JFrame implements GLEventListener
 
         sun = gl.glGenLists(1);
         gl.glNewList(sun, GL2.GL_COMPILE);
-            drawCircle(gl, 5f, 5f, 1f);
+        drawCircle(gl, 5f, 5f, 1f);
         gl.glEndList();
     }
 
@@ -159,10 +159,10 @@ public class tema3 extends JFrame implements GLEventListener
         for(int i = -5; i < 5; i++) {
             for(int j = -5; j < 5; j++) {
                 gl.glBegin(GL2.GL_POLYGON);
-                    gl.glVertex2f(i, i + 1);
-                    gl.glVertex2f(i, j);
-                    gl.glVertex2f(i + 1, j);
-                    gl.glVertex2f(i, j + 1);
+                gl.glVertex2f(i, i + 1);
+                gl.glVertex2f(i, j);
+                gl.glVertex2f(i + 1, j);
+                gl.glVertex2f(i, j + 1);
                 gl.glEnd();
             }
         }

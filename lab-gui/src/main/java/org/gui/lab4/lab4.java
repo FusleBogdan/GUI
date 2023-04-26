@@ -233,43 +233,43 @@ public class lab4 extends JFrame implements GLEventListener
         gl.glEnable(GL2.GL_LINE_STIPPLE);
 
         gl.glBegin(GL2.GL_POINTS);
-            // Set the vertex color to Red.
-            gl.glColor3f(1.0f, 0.0f, 0.0f);
-            gl.glVertex2f(0.2f, 0.2f);
-            // Set the vertex color to Green.
-            gl.glColor3f(0.0f, 1.0f, 0.0f);
-            gl.glVertex2f(0.4f, 0.2f);
-            // Set the vertex color to Blue.
-            gl.glColor3f(0.0f, 0.0f, 1.0f);
-            gl.glVertex2f(0.2f, 0.4f);
-            // Set the vertex color to White.
-            gl.glColor3f(1.0f, 1.0f, 1.0f);
-            gl.glVertex2f(0.4f, 0.4f);
+        // Set the vertex color to Red.
+        gl.glColor3f(1.0f, 0.0f, 0.0f);
+        gl.glVertex2f(0.2f, 0.2f);
+        // Set the vertex color to Green.
+        gl.glColor3f(0.0f, 1.0f, 0.0f);
+        gl.glVertex2f(0.4f, 0.2f);
+        // Set the vertex color to Blue.
+        gl.glColor3f(0.0f, 0.0f, 1.0f);
+        gl.glVertex2f(0.2f, 0.4f);
+        // Set the vertex color to White.
+        gl.glColor3f(1.0f, 1.0f, 1.0f);
+        gl.glVertex2f(0.4f, 0.4f);
         gl.glEnd();
 
         gl.glLineWidth(1.5f);
 
         gl.glColor3f(1.f, 0.f, 0.f);
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glVertex2f(0.9f, 0.9f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glVertex2f(0.9f, 0.9f);
         gl.glEnd();
 
         gl.glColor3f(0.f, 1.f, 0.f);
         gl.glBegin(GL2.GL_LINES);
-            gl.glVertex2f(0.9f, 0.2f);
-            gl.glVertex2f(0.2f, 0.9f);
+        gl.glVertex2f(0.9f, 0.2f);
+        gl.glVertex2f(0.2f, 0.9f);
         gl.glEnd();
 
         gl.glBegin(GL2.GL_POLYGON);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         // Do not render front-faced polygons.
@@ -281,14 +281,14 @@ public class lab4 extends JFrame implements GLEventListener
 
         // Define vertices in clockwise order (back-faced)
         gl.glBegin(GL2.GL_POLYGON);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         gl.glPolygonMode(GL.GL_FRONT_AND_BACK, GL2.GL_FILL);
@@ -300,14 +300,14 @@ public class lab4 extends JFrame implements GLEventListener
 
         // Define vertices in clockwise order (back-faced).
         gl.glBegin(GL2.GL_POLYGON);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         // Disable polygon stipple.
@@ -322,25 +322,25 @@ public class lab4 extends JFrame implements GLEventListener
 
         // Define vertices in clockwise order (back-faced).
         gl.glBegin(GL2.GL_POLYGON);
-            // Define normal for vertex 1
-            gl.glNormal3f(0.f, 0.f, 1.f);
-            gl.glColor3f(1.f, 0.f, 0.f);
-            gl.glVertex2f(0.2f, 0.2f);
+        // Define normal for vertex 1
+        gl.glNormal3f(0.f, 0.f, 1.f);
+        gl.glColor3f(1.f, 0.f, 0.f);
+        gl.glVertex2f(0.2f, 0.2f);
 
-            // Define normal for vertex 2
-            gl.glNormal3f(0.f, 0.f, 1.f);
-            gl.glColor3f(0.f, 1.f, 0.f);
-            gl.glVertex2f(0.2f, 0.4f);
+        // Define normal for vertex 2
+        gl.glNormal3f(0.f, 0.f, 1.f);
+        gl.glColor3f(0.f, 1.f, 0.f);
+        gl.glVertex2f(0.2f, 0.4f);
 
-            // Define normal for vertex 3
-            gl.glNormal3f(0.f, 0.f, 1.f);
-            gl.glColor3f(0.f, 0.f, 1.f);
-            gl.glVertex2f(0.4f, 0.4f);
+        // Define normal for vertex 3
+        gl.glNormal3f(0.f, 0.f, 1.f);
+        gl.glColor3f(0.f, 0.f, 1.f);
+        gl.glVertex2f(0.4f, 0.4f);
 
-            // Define normal for vertex 4
-            gl.glNormal3f(0.f, 0.f, 1.f);
-            gl.glColor3f(1.f, 1.f, 1.f);
-            gl.glVertex2f(0.4f, 0.2f);
+        // Define normal for vertex 4
+        gl.glNormal3f(0.f, 0.f, 1.f);
+        gl.glColor3f(1.f, 1.f, 1.f);
+        gl.glVertex2f(0.4f, 0.2f);
         gl.glEnd();
 
         gl.glColor3f(1.0f, 1.0f, 1.0f);
@@ -353,20 +353,20 @@ public class lab4 extends JFrame implements GLEventListener
         // Draw a square and apply a texture on it.
         gl.glBegin(GL2.GL_QUADS);
         // Lower left corner.
-            gl.glTexCoord2f(0.0f, 0.0f);
-            gl.glVertex2f(0.1f, 0.1f);
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex2f(0.1f, 0.1f);
 
-            // Lower right corner.
-            gl.glTexCoord2f(1.0f, 0.0f);
-            gl.glVertex2f(0.9f, 0.1f);
+        // Lower right corner.
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex2f(0.9f, 0.1f);
 
-            // Upper right corner.
-            gl.glTexCoord2f(1.0f, 1.0f);
-            gl.glVertex2f(0.9f, 0.9f);
+        // Upper right corner.
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex2f(0.9f, 0.9f);
 
-            // Upper left corner.
-            gl.glTexCoord2f(0.0f, 1.0f);
-            gl.glVertex2f(0.1f, 0.9f);
+        // Upper left corner.
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex2f(0.1f, 0.9f);
         gl.glEnd();
 
         // Replace all of our texture with another one.
@@ -383,49 +383,49 @@ public class lab4 extends JFrame implements GLEventListener
         // Draw a square and apply a texture on it.
 
         gl.glBegin(GL2.GL_QUADS);
-            // Lower left corner.
-            gl.glTexCoord2f(0.0f, 0.0f);
-            gl.glVertex2f(0.1f, 0.1f);
+        // Lower left corner.
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex2f(0.1f, 0.1f);
 
-            // Lower right corner.
-            gl.glTexCoord2f(1.0f, 0.0f);
-            gl.glVertex2f(0.9f, 0.1f);
+        // Lower right corner.
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex2f(0.9f, 0.1f);
 
-            // Upper right corner.
-            gl.glTexCoord2f(1.0f, 1.0f);
-            gl.glVertex2f(0.9f, 0.9f);
+        // Upper right corner.
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex2f(0.9f, 0.9f);
 
-            // Upper left corner.
-            gl.glTexCoord2f(0.0f, 1.0f);
-            gl.glVertex2f(0.1f, 0.9f);
-            gl.glEnd();
+        // Upper left corner.
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex2f(0.1f, 0.9f);
+        gl.glEnd();
 
-            // Enable blending for this texture.
-            gl.glEnable(GL.GL_BLEND);
+        // Enable blending for this texture.
+        gl.glEnable(GL.GL_BLEND);
 
-            // Set the blend function.
-            gl.glBlendFunc(GL.GL_SRC_COLOR, GL.GL_DST_ALPHA);
+        // Set the blend function.
+        gl.glBlendFunc(GL.GL_SRC_COLOR, GL.GL_DST_ALPHA);
 
-            // Bind (select) the texture
-            gl.glBindTexture(GL.GL_TEXTURE_2D, texture[1]);
+        // Bind (select) the texture
+        gl.glBindTexture(GL.GL_TEXTURE_2D, texture[1]);
 
-            // Draw a square and apply a texture on it.
-            gl.glBegin(GL2.GL_QUADS);
-            // Lower left corner.
-            gl.glTexCoord2f(0.0f, 0.0f);
-            gl.glVertex2f(0.1f, 0.1f);
+        // Draw a square and apply a texture on it.
+        gl.glBegin(GL2.GL_QUADS);
+        // Lower left corner.
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex2f(0.1f, 0.1f);
 
-            // Lower right corner.
-            gl.glTexCoord2f(1.0f, 0.0f);
-            gl.glVertex2f(0.9f, 0.1f);
+        // Lower right corner.
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex2f(0.9f, 0.1f);
 
-            // Upper right corner.
-            gl.glTexCoord2f(1.0f, 1.0f);
-            gl.glVertex2f(0.9f, 0.9f);
+        // Upper right corner.
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex2f(0.9f, 0.9f);
 
-            // Upper left corner.
-            gl.glTexCoord2f(0.0f, 1.0f);
-            gl.glVertex2f(0.1f, 0.9f);
+        // Upper left corner.
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex2f(0.1f, 0.9f);
         gl.glEnd();
 
         gl.glFlush();

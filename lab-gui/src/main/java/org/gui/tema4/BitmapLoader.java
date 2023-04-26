@@ -1,7 +1,7 @@
-package org.gui.lab6;
+package org.gui.tema4;
 
-import org.gui.lab4.ResourceRetriever;
 
+//import org.gui.lab4.ResourceRetriever;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
@@ -146,4 +146,3 @@ public class BitmapLoader {
         }
     }
 }
-

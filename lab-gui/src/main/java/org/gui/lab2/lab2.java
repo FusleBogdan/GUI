@@ -14,6 +14,21 @@ public class lab2 extends JFrame implements GLEventListener
     {
         super("Java OpenGL");
 
+        GLProfile glProfile = GLProfile.getDefault();
+        GLCapabilities glCapabilities = new GLCapabilities(glProfile);
+        glCapabilities.setHardwareAccelerated(true);
+        glCapabilities.setDoubleBuffered(true);
+        glCapabilities.setNumSamples(2);
+        glCapabilities.setSampleBuffers(true);
+
+        GLCanvas glCanvas = new GLCanvas(glCapabilities);
+        glCanvas.addGLEventListener(this);
+
+        getContentPane().add(glCanvas, BorderLayout.CENTER);
+        setSize(500, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -1,4 +1,4 @@
-package org.gui.lab6;
+package org.gui.tema4;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -7,7 +7,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GLAutoDrawable;
+import com.jogamp.opengl.GLEventListener;
 import com.jogamp.opengl.awt.GLCanvas;
 import com.jogamp.opengl.util.awt.ImageUtil;
 import com.jogamp.opengl.util.texture.Texture;
@@ -22,16 +24,12 @@ public class Chessboard implements GLEventListener {
     private GLCanvas canvas;
 
     public Chessboard() {
-        GLProfile glProfile = GLProfile.getDefault();
-        // Creating an object to manipulate OpenGL parameters.
-        GLCapabilities capabilities = new GLCapabilities(glProfile);
-
-        // Setting some OpenGL parameters.
-        capabilities.setHardwareAccelerated(true);
-        capabilities.setDoubleBuffered(true);
-
-        canvas = new GLCanvas(capabilities);
+        canvas = new GLCanvas();
         canvas.addGLEventListener(this);
+    }
+
+    public GLCanvas getCanvas() {
+        return canvas;
     }
 
     public void init(GLAutoDrawable drawable) {
@@ -43,12 +41,12 @@ public class Chessboard implements GLEventListener {
         // load the white texture from an image file
 
         try {
-            whiteTexture = loadTexture(gl, "textures/texture1.jpg");
+            whiteTexture = loadTexture(gl, "src/Lab4/textures/texture1.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            blackTexture = loadTexture(gl, "textures/texture5.jpg");
+            blackTexture = loadTexture(gl, "src/Lab4/textures/texture4.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,7 +74,11 @@ public class Chessboard implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
 
-        //gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
+        gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
+
+
+        //whiteTexture.bind(gl);  NOT HERE
+        //blackTexture.bind(gl);  NOT HERE
 
 
         //  chessboard
@@ -130,9 +132,10 @@ public class Chessboard implements GLEventListener {
         gl.glLoadIdentity();
     }
 
-    public void run() {
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Chessboard");
-        frame.getContentPane().add(canvas);
+        Chessboard chessboard = new Chessboard();
+        frame.add(chessboard.getCanvas());
         frame.setSize(400, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

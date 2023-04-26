@@ -7,7 +7,15 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    sourceCompatibility = '1.8' // or '11', '17', etc., depending on the Java version you're using
+
 }
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11, JavaVersion.VERSION_17, etc., depending on the Java version you're using
+    targetCompatibility = JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11, JavaVersion.VERSION_17, etc., depending on the Java version you're using
+}
+
 
 dependencies {
     implementation files("./lib/gluegen-rt.jar")

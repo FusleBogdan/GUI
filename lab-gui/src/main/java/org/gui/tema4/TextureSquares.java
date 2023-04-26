@@ -1,5 +1,4 @@
 package org.gui.tema4;
-
 import javax.imageio.ImageIO;
 import com.jogamp.opengl.*;
 import com.jogamp.opengl.awt.GLCanvas;
@@ -48,12 +47,12 @@ public class TextureSquares implements GLEventListener {
 
         // Load textures
         try {
-            texture1 = loadTexture(gl, "textures/texture3.jpg");
+            texture1 = loadTexture(gl, "src/Lab4/textures/texture1.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            texture2 = loadTexture(gl, "textures/texture4.jpg");
+            texture2 = loadTexture(gl, "src/Lab4/textures/texture4.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -122,23 +121,23 @@ public class TextureSquares implements GLEventListener {
     }
 
     private Texture loadTexture(GL2 gl, String filename) throws IOException {
-        BufferedImage image = ImageIO.read(new File(filename));
-        ImageUtil.flipImageVertically(image);
+            BufferedImage image = ImageIO.read(new File(filename));
+            ImageUtil.flipImageVertically(image);
 
-        TextureData data = AWTTextureIO.newTextureData(gl.getGLProfile(), image, false);
-        Texture texture = TextureIO.newTexture(data);
-        int textureId = texture.getTextureObject(gl);
+            TextureData data = AWTTextureIO.newTextureData(gl.getGLProfile(), image, false);
+            Texture texture = TextureIO.newTexture(data);
+            int textureId = texture.getTextureObject(gl);
 
 
-        gl.glBindTexture(GL2.GL_TEXTURE_2D, textureId);
-        gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
-        gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-        gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
-        gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, GL2.GL_REPEAT);
-        gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_MODULATE);
+            gl.glBindTexture(GL2.GL_TEXTURE_2D, textureId);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
+            gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, GL2.GL_REPEAT);
+            gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_MODULATE);
 
-        return texture;
-    }
+            return texture;
+        }
 
 
     private BufferedImage loadImage(String filename) throws IOException {
